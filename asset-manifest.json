@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.37fc05c1.css",
+    "main.js": "/portfolio/static/js/main.8e84e1dd.js",
+    "static/js/453.48587b36.chunk.js": "/portfolio/static/js/453.48587b36.chunk.js",
+    "static/media/nisha_jpg.jpg": "/portfolio/static/media/nisha_jpg.a881634a1934e4cdd98a.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.37fc05c1.css.map": "/portfolio/static/css/main.37fc05c1.css.map",
+    "main.8e84e1dd.js.map": "/portfolio/static/js/main.8e84e1dd.js.map",
+    "453.48587b36.chunk.js.map": "/portfolio/static/js/453.48587b36.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37fc05c1.css",
+    "static/js/main.8e84e1dd.js"
+  ]
+}
