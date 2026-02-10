@@ -1,5 +1,7 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import nishaImg from "./nisha_jpg.jpg";
+import { Navbar, Nav, Container, Row, Col, Card } from "react-bootstrap";
 
 function App() {
   return (
@@ -13,23 +15,31 @@ function App() {
       </div>
       <div className="top-divider" />
 
-      {/* Header */}
-      <header className="header">
-        <div className="header-content">
-          <div className="logo-title">
-            <h1>Dr. Nisha Maheshwari</h1>
-            <p className="subtitle">Dentist</p>
-          </div>
-          <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-            <a href="#appointment" className="book-btn">
-              Book Appointment
-            </a>
-          </nav>
-        </div>
-      </header>
+      {/* Header with React-Bootstrap Navbar */}
+      <Navbar bg="custom" expand="lg" sticky="top" className="navbar-custom">
+        <Container className="navbar-container">
+          <Navbar.Brand className="navbar-brand">
+            <div className="logo-title">
+              <h1>Dr. Nisha Maheshwari</h1>
+              <p className="subtitle">Dentist</p>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="navbar-toggle-custom"
+          />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto nav-links-custom">
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#services">Services</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#appointment" className="book-btn">
+                Book Appointment
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
       {/* Hero Section with Overlapping Image */}
       <section className="hero">
@@ -59,123 +69,197 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="about">
-        <h3>Professional Summary</h3>
-        <p>
-          Dr. Nisha Maheshwari joined Dr. Castel’s practice in early 2024,
-          bringing a wealth of knowledge and a commitment to excellence in
-          patient care. Her meticulous, kind and caring approach has earned her
-          a reputation for delivering exceptional dental treatment tailored to
-          each patient’s unique needs. Dr. Nisha is also a decorated
-          professional, having received numerous prestigious awards, including
-          OKU honors (awarded to the top 5% of students), the Periodontal
-          Recognition Award, the Excellence in TMJ and Oral Facial Pain award by
-          the AAOP, the Ismail Syed Memorial Award, and multiple scholarships
-          from the Ohio Dental Association (ODA). She is also part of the ADA,
-          ODA, and GCDS society.
-          <br /> <br />
-          Her dedication to dentistry is matched by her passion for creating a
-          welcoming environment where patient comfort and care come first.
-          Outside the office, Dr. Nisha enjoys spending time with her family,
-          hiking, and playing badminton, embracing a balanced lifestyle that
-          fosters both personal and professional growth.
-        </p>
-      </section>
+      <Container id="about" className="my-5">
+        <div className="about-container">
+          <h3 className="about-title text-center">Professional Summary</h3>
+          <p className="about-text">
+            Dr. Nisha Maheshwari joined Dr. Castel’s practice in early 2024,
+            bringing a wealth of knowledge and a commitment to excellence in
+            patient care. Her meticulous, kind and caring approach has earned
+            her a reputation for delivering exceptional dental treatment
+            tailored to each patient’s unique needs. Dr. Nisha is also a
+            decorated professional, having received numerous prestigious awards,
+            including OKU honors (awarded to the top 5% of students), the
+            Periodontal Recognition Award, the Excellence in TMJ and Oral Facial
+            Pain award by the AAOP, the Ismail Syed Memorial Award, and multiple
+            scholarships from the Ohio Dental Association (ODA). She is also
+            part of the ADA, ODA, and GCDS society.
+            <br /> <br />
+            Her dedication to dentistry is matched by her passion for creating a
+            welcoming environment where patient comfort and care come first.
+            Outside the office, Dr. Nisha enjoys spending time with her family,
+            hiking, and playing badminton, embracing a balanced lifestyle that
+            fosters both personal and professional growth.
+          </p>
+        </div>
+      </Container>
 
       {/* Services Section */}
-      <section id="services" className="services">
-        <h3>Experienced in Multiple Medical Practices</h3>
-        <div className="service-list">
-          <div className="service-item">
-            <h4>Robotic Ovarian Cyst Surgery</h4>
-            <p>
-              Comprehensive care for ovarian cysts, including minimally invasive
-              and robotic techniques.
-            </p>
-          </div>
-          <div className="service-item">
-            <h4>Robotic Myomectomy</h4>
-            <p>
-              Expert fibroid surgery, for pain relief and improved fertility
-              outcomes.
-            </p>
-          </div>
-          <div className="service-item">
-            <h4>Robotic Hysterectomy</h4>
-            <p>
-              Minimally invasive surgery for complex gynecological conditions.
-            </p>
-          </div>
-          <div className="service-item">
-            <h4>Gynecologic Oncology</h4>
-            <p>
-              Management of cancers, precancerous lesions, and routine
-              check-ups.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Container id="services" className="services-container my-5">
+        <h3 className="services-title text-center mb-5">
+          Experienced in Multiple Medical Practices
+        </h3>
+        <Row className="g-4">
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="service-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Robotic Ovarian Cyst Surgery</Card.Title>
+                <Card.Text>
+                  Comprehensive care for ovarian cysts, including minimally
+                  invasive and robotic techniques.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="service-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Robotic Myomectomy</Card.Title>
+                <Card.Text>
+                  Expert fibroid surgery, for pain relief and improved fertility
+                  outcomes.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="service-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Robotic Hysterectomy</Card.Title>
+                <Card.Text>
+                  Minimally invasive surgery for complex gynecological
+                  conditions.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="service-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Gynecologic Oncology</Card.Title>
+                <Card.Text>
+                  Management of cancers, precancerous lesions, and routine
+                  check-ups.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
 
       {/* Specialized Treatments Section */}
-      <section className="specialized">
-        <h3>Specialized Cancer Treatments in Women</h3>
-        <div className="specialized-list">
-          <div className="specialized-item">
-            <h4>Cervical Cancer</h4>
-            <p>Advanced screening and treatment for cervical cancer.</p>
-          </div>
-          <div className="specialized-item">
-            <h4>Breast Cancer</h4>
-            <p>Comprehensive care for breast cancer patients.</p>
-          </div>
-          <div className="specialized-item">
-            <h4>Ovarian Cancer</h4>
-            <p>Expertise in diagnosis and management of ovarian cancer.</p>
-          </div>
-          <div className="specialized-item">
-            <h4>Endometrial Cancer</h4>
-            <p>Personalized treatment plans for endometrial cancer.</p>
-          </div>
-        </div>
-      </section>
+      <Container className="specialized-container my-5">
+        <h3 className="specialized-title text-center mb-5">
+          Specialized Cancer Treatments in Women
+        </h3>
+        <Row className="g-4">
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="specialized-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Cervical Cancer</Card.Title>
+                <Card.Text>
+                  Advanced screening and treatment for cervical cancer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="specialized-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Breast Cancer</Card.Title>
+                <Card.Text>
+                  Comprehensive care for breast cancer patients.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="specialized-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Ovarian Cancer</Card.Title>
+                <Card.Text>
+                  Expertise in diagnosis and management of ovarian cancer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={3} className="mb-4">
+            <Card className="specialized-card h-100 border-0">
+              <Card.Body>
+                <Card.Title>Endometrial Cancer</Card.Title>
+                <Card.Text>
+                  Personalized treatment plans for endometrial cancer.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
 
       {/* Testimonials Section */}
-      <section className="testimonials">
-        <h3>What Our Patients Say</h3>
-        <div className="testimonial-list">
-          <div className="testimonial-item">
-            <p>“The best doctor ever”</p>
-            <span>- S. Jain</span>
-          </div>
-          <div className="testimonial-item">
-            <p>
-              “Caring, knowledgeable, and supportive throughout my treatment.”
-            </p>
-            <span>- R. Sharma</span>
-          </div>
-        </div>
-      </section>
+      <Container className="testimonials-container my-5">
+        <h3 className="testimonials-title text-center mb-5">
+          What Our Patients Say
+        </h3>
+        <Row className="g-4 justify-content-center">
+          <Col md={6} lg={4}>
+            <Card className="testimonial-card h-100 border-0">
+              <Card.Body>
+                <Card.Text className="testimonial-text">
+                  "The best doctor ever"
+                </Card.Text>
+                <Card.Text className="testimonial-author">- S. Jain</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} lg={4}>
+            <Card className="testimonial-card h-100 border-0">
+              <Card.Body>
+                <Card.Text className="testimonial-text">
+                  "Caring, knowledgeable, and supportive throughout my
+                  treatment."
+                </Card.Text>
+                <Card.Text className="testimonial-author">
+                  - R. Sharma
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
 
       {/* Contact & Footer */}
-      <footer className="footer" id="contact">
-        <div className="footer-content">
-          <div>
-            <h4>Contact Details</h4>
-            <p>+91 1234567890</p>
-            <p>nisha@example.com</p>
-            <p>Mon - Sat: 09:00 AM - 06:00 PM</p>
-          </div>
-          <div>
-            <h4>Quick Links</h4>
-            <a href="#about">About</a>
-            <br />
-            <a href="#services">Services</a>
-            <br />
-            <a href="#appointment">Book Appointment</a>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© 2026 Dr. Nisha Maheshwari. All rights reserved.</p>
+      <footer className="footer mt-5" id="contact">
+        <Container>
+          <Row className="footer-content py-5">
+            <Col md={6} lg={6} className="mb-4 mb-md-0">
+              <h5 className="footer-title">Contact Details</h5>
+              <p>+91 1234567890</p>
+              <p>nisha@example.com</p>
+              <p>Mon - Sat: 09:00 AM - 06:00 PM</p>
+            </Col>
+            <Col md={6} lg={6} className="mb-4 mb-md-0">
+              <h5 className="footer-title">Quick Links</h5>
+              <Nav className="flex-column">
+                <Nav.Link href="#about" className="footer-link">
+                  About
+                </Nav.Link>
+                <Nav.Link href="#services" className="footer-link">
+                  Services
+                </Nav.Link>
+                <Nav.Link href="#appointment" className="footer-link">
+                  Book Appointment
+                </Nav.Link>
+              </Nav>
+            </Col>
+          </Row>
+        </Container>
+        <div className="footer-bottom py-3">
+          <Container>
+            <p className="mb-0">
+              © 2026 Dr. Nisha Maheshwari. All rights reserved.
+            </p>
+          </Container>
         </div>
       </footer>
     </div>
