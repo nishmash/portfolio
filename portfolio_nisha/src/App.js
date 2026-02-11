@@ -11,7 +11,7 @@ function App() {
         <div className="top-contact-content">
           <a href="tel:+911234567890" className="contact-item">
             <span className="contact-icon">📞</span>
-            <span>+91 1234567890</span>
+            <span>+12345678090</span>
           </a>
           <a href="mailto:nisha@example.com" className="contact-item">
             <span className="contact-icon">✉️</span>
