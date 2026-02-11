@@ -9,11 +9,16 @@ function App() {
       {/* Top Contact Bar */}
       <div className="top-contact-bar">
         <div className="top-contact-content">
-          <span>+91 1234567890</span>
-          <span>nisha@example.com</span>
+          <a href="tel:+911234567890" className="contact-item">
+            <span className="contact-icon">📞</span>
+            <span>+91 1234567890</span>
+          </a>
+          <a href="mailto:nisha@example.com" className="contact-item">
+            <span className="contact-icon">✉️</span>
+            <span>nisha@example.com</span>
+          </a>
         </div>
       </div>
-      <div className="top-divider" />
 
       {/* Header with React-Bootstrap Navbar */}
       <Navbar bg="custom" expand="lg" sticky="top" className="navbar-custom">
@@ -51,8 +56,9 @@ function App() {
               <span className="hero-highlight">you can trust</span>
             </h2>
             <p className="hero-desc">
-              Personalized care, expert diagnosis, and advanced cancer treatment
-              options – all tailored for women’s health.
+              Personalized care, expert diagnosis, and advanced dentistry
+              treatment options to help you achieve optimal oral health and a
+              confident smile.
             </p>
             <a href="#appointment" className="book-btn">
               Book Appointment
@@ -97,16 +103,16 @@ function App() {
       {/* Services Section */}
       <Container id="services" className="services-container my-5">
         <h3 className="services-title text-center mb-5">
-          Experienced in Multiple Medical Practices
+          Comprehensive Dental Care Services
         </h3>
         <Row className="g-4">
           <Col md={6} lg={3} className="mb-4">
             <Card className="service-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Robotic Ovarian Cyst Surgery</Card.Title>
+                <Card.Title>General Dentistry</Card.Title>
                 <Card.Text>
-                  Comprehensive care for ovarian cysts, including minimally
-                  invasive and robotic techniques.
+                  Comprehensive oral health care including cleanings, exams, and
+                  preventive treatments.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -114,10 +120,10 @@ function App() {
           <Col md={6} lg={3} className="mb-4">
             <Card className="service-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Robotic Myomectomy</Card.Title>
+                <Card.Title>Periodontal Treatment</Card.Title>
                 <Card.Text>
-                  Expert fibroid surgery, for pain relief and improved fertility
-                  outcomes.
+                  Expert gum disease management and periodontal therapy for
+                  optimal oral health.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -125,10 +131,10 @@ function App() {
           <Col md={6} lg={3} className="mb-4">
             <Card className="service-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Robotic Hysterectomy</Card.Title>
+                <Card.Title>TMJ & Oral Facial Pain</Card.Title>
                 <Card.Text>
-                  Minimally invasive surgery for complex gynecological
-                  conditions.
+                  Specialized treatment for jaw disorders and facial pain
+                  management.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -136,10 +142,10 @@ function App() {
           <Col md={6} lg={3} className="mb-4">
             <Card className="service-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Gynecologic Oncology</Card.Title>
+                <Card.Title>Restorative Dentistry</Card.Title>
                 <Card.Text>
-                  Management of cancers, precancerous lesions, and routine
-                  check-ups.
+                  Expert fillings, restorations, and reconstruction for damaged
+                  teeth.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -150,15 +156,15 @@ function App() {
       {/* Specialized Treatments Section */}
       <Container className="specialized-container my-5">
         <h3 className="specialized-title text-center mb-5">
-          Specialized Cancer Treatments in Women
+          Specialized Dental Services
         </h3>
         <Row className="g-4">
           <Col md={6} lg={3} className="mb-4">
             <Card className="specialized-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Cervical Cancer</Card.Title>
+                <Card.Title>Root Canal Therapy</Card.Title>
                 <Card.Text>
-                  Advanced screening and treatment for cervical cancer.
+                  Expert endodontic treatment to save your natural tooth.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -166,9 +172,9 @@ function App() {
           <Col md={6} lg={3} className="mb-4">
             <Card className="specialized-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Breast Cancer</Card.Title>
+                <Card.Title>Dental Implants</Card.Title>
                 <Card.Text>
-                  Comprehensive care for breast cancer patients.
+                  Advanced implant placement for permanent tooth replacement.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -176,9 +182,9 @@ function App() {
           <Col md={6} lg={3} className="mb-4">
             <Card className="specialized-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Ovarian Cancer</Card.Title>
+                <Card.Title>Crown & Bridge Work</Card.Title>
                 <Card.Text>
-                  Expertise in diagnosis and management of ovarian cancer.
+                  Precision restorations for damaged or missing teeth.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -186,9 +192,9 @@ function App() {
           <Col md={6} lg={3} className="mb-4">
             <Card className="specialized-card h-100 border-0">
               <Card.Body>
-                <Card.Title>Endometrial Cancer</Card.Title>
+                <Card.Title>Cosmetic Dentistry</Card.Title>
                 <Card.Text>
-                  Personalized treatment plans for endometrial cancer.
+                  Professional teeth whitening and smile enhancement.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -232,13 +238,14 @@ function App() {
       <footer className="footer mt-5" id="contact">
         <Container>
           <Row className="footer-content py-5">
-            <Col md={6} lg={6} className="mb-4 mb-md-0">
+            <Col xs={12} sm={6} className="footer-column">
               <h5 className="footer-title">Contact Details</h5>
+              <p>Location</p>
               <p>+91 1234567890</p>
               <p>nisha@example.com</p>
               <p>Mon - Sat: 09:00 AM - 06:00 PM</p>
             </Col>
-            <Col md={6} lg={6} className="mb-4 mb-md-0">
+            <Col xs={12} sm={6} className="footer-column">
               <h5 className="footer-title">Quick Links</h5>
               <Nav className="flex-column">
                 <Nav.Link href="#about" className="footer-link">
